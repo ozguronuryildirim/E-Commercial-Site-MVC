@@ -1,5 +1,8 @@
-﻿using System;
+﻿using A.ÖzgürOnurYıldırım_E_ticaretSitesiWebUI.Identity;
+using A.ÖzgürOnurYıldırım_E_ticaretSitesiWebUI.Models.Entity;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -13,6 +16,9 @@ namespace A.ÖzgürOnurYıldırım_E_ticaretSitesiWebUI
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            Database.SetInitializer(new DataInitializer());
+           
+
         }
     }
 }

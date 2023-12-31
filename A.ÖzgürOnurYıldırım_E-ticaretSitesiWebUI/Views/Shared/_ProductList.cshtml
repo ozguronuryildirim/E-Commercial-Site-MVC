@@ -1,0 +1,30 @@
+﻿@using A.ÖzgürOnurYıldırım_E_ticaretSitesiWebUI.Models.Entity;
+@model IEnumerable<ProductModel>
+
+
+<div class="container pb-5">
+    <div class="col-md-9">
+        <div class="row">
+
+            <div class="card-deck">
+                @foreach (var urun in Model)
+                {<div class="col-md-4">
+                        <div class="card">
+                            <img src="~/Upload/@urun.Image" class="card-img-top" alt="@urun.Name">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="@Url.Action("Details", "Home", new { id = urun.Id })">@urun.Name</a>
+                                </h5>
+                                <p class="card-text pt-2">@urun.Description</p>
+                                <p class="card-text"><small class="text-muted">@urun.Price</small></p>
+                            </div>
+
+                        </div>
+                    </div>
+                }
+
+
+            </div>
+        </div>
+    </div>
+</div>

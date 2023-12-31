@@ -10,16 +10,17 @@ namespace A.ÖzgürOnurYıldırım_E_ticaretSitesiWebUI.Models.Entity
     {
         public DataContext():base("dataConnection")//base parentez içine connection string içindeki adres veriliyor
         {                                          //bas olmazsa Adres verilmezse random olarak oluşturuluyor
-
+            
         }
 
 
 
 
-       
 
-        public DbSet<Category> Products { get; set; }
-        public DbSet<Product> Categories { get; set; }
+
+
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
 
 
